@@ -8,12 +8,12 @@ var findPeakElement = function(nums) {
     
     while(start < end) {
         let mid = parseInt(start + (end - start) / 2);
+        
         if(nums[mid] > nums[mid + 1]) {
-            //nums is dec
             end = mid;
         }
+        
         else {
-            //nums is asc
             start = mid + 1;
         }
     }
